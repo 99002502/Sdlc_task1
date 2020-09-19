@@ -113,7 +113,19 @@ void calculator_menu(void)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
+case Reverse:
+int reverse(int operand1)
+{
+    /* Find number of digits in num */
+    int digit = (int)log10(operand1);
+    
+    /* Recursion base condition */
+    if(operand1 == 0)
+        return 0;
 
+    return ((operand1%10 * pow(10, digit)) + reverse(operand1/10));
+}
+            
         case 5:
             exit(0);
             break;
