@@ -47,6 +47,6 @@ int divide(int operand1, int operand2);
 
 int factorial(int operand1);
 int reverse(int operand1);
-int isPrime(int operand1,int div=2);
+int armstrong(int operand1);
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
