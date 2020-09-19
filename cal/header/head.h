@@ -46,7 +46,6 @@ int multiply(int operand1, int operand2);
 int divide(int operand1, int operand2);
 
 int factorial(int operand1);
-int palindrome(int operand1);
 int reverse(int operand1);
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
