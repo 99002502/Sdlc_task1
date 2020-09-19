@@ -35,3 +35,22 @@ int factorial(int operand1)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
+int palindrome(int operand1)
+{
+    if(0==operand1)
+        return 0;
+    if(operand1==reverse(operand1))
+        return 1;
+}
+int reverse(int operand1)
+{
+    /* Find number of digits in num */
+    int digit = (int)log10(operand1);
+    
+    /* Recursion base condition */
+    if(operand1 == 0)
+        return 0;
+
+    return ((operand1%10 * pow(10, digit)) + reverse(operand1/10));
+}
+    
