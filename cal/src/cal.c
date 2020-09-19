@@ -22,3 +22,16 @@ int divide(int operand1, int operand2)
     else
         return operand1 / operand2;
 }
+int factorial(int operand1)
+{
+  /* Return -1 for negative numbers */
+  if(operand1 < 0)
+    return -1;
+
+  /* Return 1 for 0 */
+  if(operand1 == 0)
+    return 1;
+
+  /* Recursively calculate Factorial of the number */
+  return operand1 * factorial(operand1-1);
+}
