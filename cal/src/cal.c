@@ -46,4 +46,17 @@ int reverse(int operand1)
 
     return ((operand1%10 * pow(10, digit)) + reverse(operand1/10));
 }
+int isPrime(int operand1,int div=2)
+{ 
+   // Base cases 
+    if (operand1 <= 2) 
+        return (operand1 == 2) ? 1 : 0; 
+    if (operand1 % div == 0) 
+        return 0; 
+    if (div * div > operand1) 
+        return 1; 
+  
+    // Check for next divisor 
+    return isPrime(operand1, div + 1); 
+} 
     
